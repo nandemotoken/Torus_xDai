@@ -1,5 +1,5 @@
 let web3tr;
-
+ 
 async function newTorus() {
 
 const torus = new Torus({
