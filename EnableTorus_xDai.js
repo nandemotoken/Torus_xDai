@@ -1,8 +1,9 @@
 let web3tr;
+let torus;
  
 async function newTorus() {
 
-const torus = new Torus({
+torus = new Torus({
   buttonPosition: "top-right" // default: bottom-left
 });
 await torus.init({
