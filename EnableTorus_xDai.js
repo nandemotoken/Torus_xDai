@@ -20,4 +20,8 @@ await torus.login(); // await torus.ethereum.enable()
 web3tr = new Web3(torus.provider);
 }
 
+async function checkmycake(){
+  console.log("test");
+}
+
 newTorus();
