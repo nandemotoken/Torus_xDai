@@ -22,12 +22,24 @@ web3tr = new Web3(torus.provider);
 
 const Address = "0xA466528252Eb9aE675d5E6C63163CAACB5E47DC6";
 
-async function checkmycake(){
-  console.log("test");
+async function checkcake(){
+  console.log("check cake");
   
   mycontract = await new web3tr.eth.Contract(abi, Address);
   let fromblockchain1 = await mycontract.methods.name().call();
   console.log(fromblockchain1);
 }
+
+async function makecake(){
+  console.log("make cake");
+  
+  mycontract = await new web3tr.eth.Contract(abi, Address);
+ 
+ 	let useraddress = await web3tr.eth.getAccounts();
+  mycontract.methods.mint().send({ from: useraddress[0] });
+	console.log("useraddress[0]_is_your_Address:" + useraddress[0]);
+}
+
+
 
 newTorus();
